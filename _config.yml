@@ -59,7 +59,8 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: 雯饰太一
+#disqus_username: 雯饰太一
+#duoshuo_username: _你的用户名_
 
 # Netease settings
 netease_comment: false
