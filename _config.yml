@@ -24,7 +24,7 @@ github_username: wenshitaiyi
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 20
+paginate: 3
 exclude:
   [
     "less",
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: wenshitaiyi
+disqus_username: 雯饰太一
 
 # Netease settings
 netease_comment: false
@@ -89,14 +89,7 @@ service-worker: true
 page-mathjax: false
 
 # Friends 没有朋友，暂时将朋友模块取消掉吧
-# friends:
-  # [
-    # { title: "乱序（Midare）", href: "http://mida.re/" },
-    # { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    # { title: "Kun Qian", href: "http://kunq.me" },
-    # { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    # { title: "SmdCn", href: "http://blog.smdcn.net" },
-    # { title: "JiyinYiyong", href: "http://tiye.me/" },
-    # { title: "DHong Say", href: "http://dhong.co" },
-    # { title: "尹峰以为", href: "http://ingf.github.io/" },
-  # ]
+friends:
+  [
+    { title: "红毛不详", href: "none" }
+  ]
