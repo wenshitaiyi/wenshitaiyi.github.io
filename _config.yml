@@ -24,7 +24,7 @@ github_username: wenshitaiyi
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
+paginate: 20
 exclude:
   [
     "less",
@@ -69,12 +69,12 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_track_id: "G-KCRYQD9VGV" # Format: UA-xxxxxx-xx
+ga_domain: auto
 
 # Sidebar settings
-sidebar: false # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
+sidebar: true # whether or not using Sidebar.
+sidebar-about-description: "书山有路勤为径 <br> 学海无涯苦作舟"
 sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
