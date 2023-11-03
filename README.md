@@ -1,2 +1,2 @@
-# wsty.github.io
+# wenshitaiyi.github.io
 世界种地日记
