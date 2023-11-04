@@ -1,7 +1,7 @@
 # Site settings
 title: 种地日志
 SEOTitle: 雯饰太一的博客
-header-img: img/home-bg.jpg
+header-img: img/home-bg-default.jpg
 email: wenshitaiyi@gmail.com
 description: "我在这个世界的某个角落默默地种地，悄悄的成长，让黑暗与肮脏永远的留在过去"
 keyword: "雯饰太一, 种地"
@@ -76,7 +76,7 @@ ga_domain: auto
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "书山有路勤为径 <br> 学海无涯苦作舟"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/icon-me.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags

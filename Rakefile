@@ -35,12 +35,14 @@ task :post do
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "layout: post"
-    post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "subtitle: \"#{subtitle.gsub(/-/,' ')}\""
+    post.puts "title: #{title.gsub(/-/,' ')}"
+    post.puts "subtitle: #{subtitle.gsub(/-/,' ')}"
     post.puts "date: #{date}"
-    post.puts "author: \"雯饰太一\""
-    post.puts "header-img: \"img/post-bg-2015.jpg\""
+    post.puts "author: 雯饰太一"
+    post.puts "header-img: img/post-bg-default.jpeg"
     post.puts "tags: []"
+	post.puts "typora-copy-images-to: ../img/post"
+	post.puts "typora-root-url: ../"
     post.puts "---"
   end
 end # task :post
