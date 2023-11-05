@@ -40,7 +40,7 @@ task :post do
     post.puts "date: #{date}"
     post.puts "author: 雯饰太一"
     post.puts "header-img: img/post-bg-default.jpeg"
-    post.puts "tags: []"
+    post.puts "tags: [temp]"
 	post.puts "typora-copy-images-to: ../img/post"
 	post.puts "typora-root-url: ../"
     post.puts "---"

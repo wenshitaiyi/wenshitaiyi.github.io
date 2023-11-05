@@ -75,7 +75,7 @@ ga_domain: auto
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "书山有路勤为径 <br> 学海无涯苦作舟"
+sidebar-about-description: "须知少是凌云志 <br> 曾许人间第一流"
 sidebar-avatar: "https://github.com/wenshitaiyi/wenshitaiyi.github.io/blob/main/img/icon-me.png?raw=true" # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
@@ -92,5 +92,7 @@ page-mathjax: false
 # Friends 没有朋友，暂时将朋友模块取消掉吧
 friends:
   [
-    { title: "红毛不详", href: "none" }
+    { title: "黑夜", href: "none" },
+    { title: "孤灯", href: "none" },
+    { title: "野酒", href: "none" }
   ]
