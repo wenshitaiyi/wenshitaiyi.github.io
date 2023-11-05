@@ -5,7 +5,7 @@ subtitle: QT的udp模块使用记录
 date: 2023-06-25 10:13:00
 author: 雯饰太一
 header-img: img/post-bg-default.jpeg
-tags: [QT,UDP]
+tags: [QT,UDP,网络]
 typora-copy-images-to: ../img/post
 typora-root-url: ../
 ---

@@ -5,7 +5,7 @@ subtitle: QT的ws网络传输协议如何运行在子线程中
 date: 2023-06-25 10:14:00
 author: 雯饰太一
 header-img: img/post-bg-default.jpeg
-tags: [QT,WS,线程]
+tags: [QT,WS,线程,网络]
 typora-copy-images-to: ../img/post
 typora-root-url: ../
 ---
