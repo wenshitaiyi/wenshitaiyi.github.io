@@ -3,6 +3,7 @@ _posts/_draft
 _posts/_archive
 *private*
 _archive
+merger/
 node_modules
 .vscode
 *.log
