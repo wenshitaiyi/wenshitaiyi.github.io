@@ -47,7 +47,23 @@ layout: default
                     {% endif %}
                 </ul>
                 <hr style="visibility: hidden;">
-
+				
+				<div id="container-blog"></div>
+				<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+				<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+				<script>
+					var gitment = new Gitment({
+					id: '', // 可选。默认为 location.href
+					owner: 'wenshitaiyi',
+					repo: 'blog_gitment',
+					oauth: {
+						client_id: 'c4e8013d9483885789b6',
+						client_secret: 'f4fbb60a3660c700432f45b9ff1dca940747cf54',
+					},
+					})
+					gitment.render('container-blog')
+				</script>
+				
                 {% if site.disqus_username %}
                 <!-- disqus 评论框 start -->
                 <div class="comment">
@@ -94,6 +110,7 @@ layout: default
             </div>
         </div>
     </div>
+	
 </article>
 
 <!-- add support for mathjax by voleking-->
@@ -134,7 +151,6 @@ layout: default
 </script>
 <!-- disqus 公共JS代码 end -->
 {% endif %}
-
 
 {% if site.anchorjs %}
 <!-- async load function -->
