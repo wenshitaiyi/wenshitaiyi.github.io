@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 网站
-subtitle: 基本是从书签里面扒出来的
+title: 软件
+subtitle: 电脑或手机中常用的软件
 date: 2023-11-05 21:01:00
 author: 雯饰太一
 header-img: img/post-bg-default.jpeg
@@ -10,5 +10,7 @@ typora-copy-images-to: ../img/post
 typora-root-url: ../
 ---
 
-[jekyll中文网站](https://jekyllcn.com/)
+网盘资源站
+
+[我的小站-阿里云盘资源共享站](https://pan666.net/)
 
