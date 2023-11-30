@@ -1,0 +1,51 @@
+---
+layout: page
+title: Test
+layout: default
+header-img: "img/bg-lie-god.jpeg"
+---
+
+{% include intro-header.html type='page' short=true %}
+
+
+
+<div class="main" id="h">
+<i id="i"></i>
+<div class="texts">
+<h2 id="name"></h2>
+<p id="description"></p>
+</div>
+
+<div id="pending">
+<p id="depends" class="middlebtn">
+<a href="#showqrcode" class="btn btn-primary" id="tenpaybtn" onclick="if (!window.__cfRLUnblockHandlers) return false; opentenpay()" data-cf-modified-e06addfa868adf7961cf2269-><svg class="icon" aria-hidden="true">
+<use xlink:href="#icon-QQ"></use>
+</svg></a>
+<a href="#showqrcode" class="btn btn-primary" id="toclick" onclick="if (!window.__cfRLUnblockHandlers) return false; openwechat()" data-cf-modified-e06addfa868adf7961cf2269-><svg class="icon" aria-hidden="true">
+<use xlink:href="#icon-weixinzhifu"></use>
+</svg></a>
+<a href="#showqrcode" class="btn btn-primary" id="alipaybtn" onclick="if (!window.__cfRLUnblockHandlers) return false; openalipay()" data-cf-modified-e06addfa868adf7961cf2269-><svg class="icon" aria-hidden="true">
+<use xlink:href="#icon-iconfontrectangle390"></use>
+</svg></a>
+<button class="btn btn-primary" id="paypalbtn" onclick="if (!window.__cfRLUnblockHandlers) return false; openbox()" data-cf-modified-e06addfa868adf7961cf2269-><svg class="icon paypal-wide" aria-hidden="true">
+<use xlink:href="#icon-paypal"></use>
+</svg></button>
+</p>
+</div>
+</div>
+
+<div class="modal" id="showqrcode">
+<div class="modal-container" role="document">
+<div class="modal-header" id="btncontainer">
+<a href="#" class="btn btn-clear float-right" id="qrcodeclose" aria-label="Close"></a>
+<div id="titleinfo" class="modal-title h5" style="text-align: center"></div>
+</div>
+<div class="modal-body">
+<div class="content" id="qrcontainer">
+<div id="currentqrcode" class="img smaller"></div>
+<img id="tenpayonly" class="img smaller">
+</div>
+</div>
+</div>
+</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;: &quot;722477b67b3749dbba753834ea7ec59d&quot;}" type="e06addfa868adf7961cf2269-text/javascript"></script><script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="e06addfa868adf7961cf2269-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"82dc1e66bc8263ff","version":"2023.10.0","r":1,"token":"ea9f82378b564bc5a73bf0f55f4c5cc9","b":1}' crossorigin="anonymous"></script>
