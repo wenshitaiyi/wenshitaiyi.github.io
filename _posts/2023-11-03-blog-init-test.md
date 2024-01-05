@@ -113,6 +113,110 @@ post.puts "---"
 
 呐，评论这一块的操作直接放弃了。
 
+### 使用Gitment评论
+
+参考链接
+
+- [Hexo中Gitment的配置](https://xoyolucas.github.io/2019/10/21/Hexo%E4%B8%ADgitment%E7%9A%84%E9%85%8D%E7%BD%AE/)
+- [给github博客添加评论功能](https://zzqcn.github.io/design/rest/add_comment.html)
+
+代码中的配置
+
+```js
+<div id="container-blog"></div>
+<link rel="stylesheet" type="text/css" href="//unpkg.com/gitalk/dist/gitalk.css?v=0.0.0">
+    <script type="text/javascript" src="//cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js?v=0.0.0"></script>
+<script type="text/javascript" src="//unpkg.com/gitalk/dist/gitalk.min.js?v=0.0.0"></script>
+<script>
+    var gitalk = new Gitalk({
+        clientID: 'c4e8013d948388xxxxxx',
+        clientSecret: 'f4fbb60a3660c700432f45b9ff1dca94xxxxxxxx',
+        repo: 'blog_gitment',
+        owner: 'wenshitaiyixxxx',
+        admin: ['wenshitaiyixxxx'],
+        id: md5(location.pathname),
+        distractionFreeMode: false
+    })
+gitalk.render('container-blog')
+</script>
+```
+
+上述代码中的样式略微调整了一下，是参考了另外一个开发者的博客[https://cynickimi.github.io/](https://cynickimi.github.io/)，甚是感谢！！
+
+> 如果要用这段代码的话，其中Gitalk中的内容需要按照自己的需求进行调整，不能直接用我的！！！
+
+## 赞赏模块
+
+> [星合の空](https://wu-kan.cn/)的赞赏部分代码做的很好，想要参考一下！
+>
+> 注：这个和[hux](https://huxpro.github.io)的博客网站似乎规则不太一样，直接将仓库clone到本地之后并不能通过jekyll serve --watch的方式进行预览，hux的博客中每一个界面都会有一个header，直接将星合の空打赏界面的代码粘贴过去后并不能正常使用。
+
+研究中...
+
+界面中的header具体有什么作用？是否可以将其中的侧边栏单独去掉？
+
+## 点击特效
+
+```js
+<script type="text/javascript">
+/* 鼠标特效 */
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("❤富强❤","❤民主❤","❤文明❤","❤和谐❤","❤自由❤","❤平等❤","❤公正❤","❤法治❤","❤爱国❤","❤敬业❤","❤诚信❤","❤友善❤");
+        var $i = $("<span></span>").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")"
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+```
+
+## 雪花效果
+
+```js
+
+<!-- 背景动画 -->
+<script>
+(function($){$.fn.snow=function(options){var $flake=$('<div id="flake" />').css({'position':'absolute','top':'-50px'}).html('&#10052;'),documentHeight=$(document).height(),documentWidth=$(document).width(),defaults={minSize:10,maxSize:20,newOn:500,flakeColor:"#FFFFFF"},options=$.extend({},defaults,options);var interval=setInterval(function(){var startPositionLeft=Math.random()*documentWidth-100,startOpacity=0.5+Math.random(),sizeFlake=options.minSize+Math.random()*options.maxSize,endPositionTop=documentHeight-40,endPositionLeft=startPositionLeft-100+Math.random()*200,durationFall=documentHeight*10+Math.random()*5000;$flake.clone().appendTo('body').css({left:startPositionLeft,opacity:startOpacity,'font-size':sizeFlake,color:options.flakeColor}).animate({top:endPositionTop,left:endPositionLeft,opacity:0.2},durationFall,'linear',function(){$(this).remove()});},options.newOn);};})(jQuery);
+$.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
+</script>
+```
+
+使用VPN的时候这个雪花特效请求的js也是可以访问到的
+
+这些效果真是神奇，只需要添加一段脚本就可以有效果
+
+## 看板娘
+
+这个人的主页上有：[ 一杯清酒邀明月](https://www.cnblogs.com/ybqjymy/)
+
+使用这个的时候会下载关于看板娘的资源，目前还没能成功的添加上
+
+## 统计分析
+
+谷歌的统计分析：footer.html中有使用`ga_track_id`的位置，是在这里进行的设置。
+
+后续还需要添加百度的分析模块
+
 ## 写些什么
 
 - 生活中经历的事情
