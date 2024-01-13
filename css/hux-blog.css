@@ -757,6 +757,15 @@ hr.small {
   border-width: 4px;
   border-color: white;
 }
+
+hr {
+  border: none; /* 移除默认边框 */
+  height: 1px; /* 设置线的高度 */
+  background-color: rgba(128, 128, 128, 0.5); /* 灰色半透明，这里的透明度是 50% */
+  margin-top: 0px; /* 根据需要调整上边距 */
+  margin-bottom: 0px; /* 根据需要调整下边距 */
+}
+
 pre,
 .table-responsive {
   -webkit-overflow-scrolling: touch;
