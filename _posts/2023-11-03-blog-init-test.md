@@ -12,7 +12,7 @@ typora-root-url: ../
 
 进行一些小小的测试，方便以后更好的种地！
 
-## 图像测试
+## 1 图像测试
 
 ![image-20231104170741574](/img/post/image-20231104170741574.png)
 
@@ -20,7 +20,7 @@ typora-root-url: ../
 
 但，根据目前了解到的内容，git仓库的容量是有限的，图像会少放一些，后续的博文尽量以文字为主。或者等经济上略微好转，便找一个不错的图床。（不过我依旧觉得相对路径才是最有效的，博客在本地或者git上都可以查看。）
 
-## 文章头
+## 2 文章头
 
 ```
 ---
@@ -49,7 +49,7 @@ tags，默认生成的是`[]`空内容，如果要换行写，则开头应该是
 
 在_posts文件夹下建立self子文件夹，可以不上传到git上，只在本地浏览。
 
-## 模板（Hux）
+## 3 模板（Hux）
 
 所有的博客都放在`_posts`文件夹下，每一篇文章都有指定的格式，可以在引入[Rake](https://github.com/ruby/rake)工具之后使用命令进行生成：
 
@@ -74,17 +74,17 @@ post.puts "tags: []"
 post.puts "---"
 ```
 
-### 头像
+### 3.1 头像
 
 需要适用网络路径才可以
 
-### 背景图片
+### 3.2 背景图片
 
 需要有足够的宽度
 
-### 网页icon
+### 3.3 网页icon
 
-## 中文调整
+## 4 中文调整
 
 | 关键字 | 页面 |
 | ------ | ---- |
@@ -107,13 +107,13 @@ post.puts "---"
 找到这个段落之后直接复制出来一个段落亦可，这里不能直接将代码写出来，因为footer中的花括号开头的代码会被jekyll自动检测到，并解析，但是会解析失败。
 ```
 
-## 评论
+## 5 评论
 
 国外的评论插件[Disqus](http://disqus.com)有试用时间，对于我这种小白不太适用；国内的[Duoshuo](http://duoshuo.com)系统，似乎已经停止维护了；甚至是QQ的邮我也不能用了。
 
 呐，评论这一块的操作直接放弃了。
 
-### 使用Gitment评论
+### 5.1 使用Gitment评论
 
 参考链接
 
@@ -145,7 +145,7 @@ gitalk.render('container-blog')
 
 > 如果要用这段代码的话，其中Gitalk中的内容需要按照自己的需求进行调整，不能直接用我的！！！
 
-## 赞赏模块
+## 6 赞赏模块
 
 > [星合の空](https://wu-kan.cn/)的赞赏部分代码做的很好，想要参考一下！
 >
@@ -155,7 +155,7 @@ gitalk.render('container-blog')
 
 界面中的header具体有什么作用？是否可以将其中的侧边栏单独去掉？
 
-## 点击特效
+## 7 点击特效
 
 ```js
 <script type="text/javascript">
@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
 </script>
 ```
 
-## 雪花效果
+## 8 雪花效果
 
 ```js
 
@@ -205,19 +205,19 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 这些效果真是神奇，只需要添加一段脚本就可以有效果
 
-## 看板娘
+## 9 看板娘
 
 这个人的主页上有：[ 一杯清酒邀明月](https://www.cnblogs.com/ybqjymy/)
 
 使用这个的时候会下载关于看板娘的资源，目前还没能成功的添加上
 
-## 统计分析
+## 10 统计分析
 
 谷歌的统计分析：footer.html中有使用`ga_track_id`的位置，是在这里进行的设置。
 
 后续还需要添加百度的分析模块
 
-## 写些什么
+## 11 写些什么
 
 - 生活中经历的事情
 - 编程所得（c++、python、personal prj···）
@@ -232,6 +232,9 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 > 有一个想法，“怎么样可以让博客对外可见，但是github仓库对外不可见”，经过一波冷静分析之后，觉得这无异于自讨苦吃，现在的记录日志含金量不高，谁看或者是谁拥有都是一样的。
 
-## 相关参考链接
+## 12 相关参考链接
 
 [jekyll中文网站](https://jekyllcn.com/)
+[Markdown 语法的使用 - 孙思锴的博客 | Kay Blog](https://sunsikai.github.io/2020/05/20/Markdown-%E8%AF%AD%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8/)
+[在Jekyll中使用LaTex - Librarius's Blog](https://lloyar.github.io/2018/10/08/mathjax-in-jekyll.html)
+[黄玄的博客 | Hux Blog](https://huangxuan.me/)
