@@ -253,7 +253,7 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 参考链接：
 
 - [测试页面（中文版） | Kubernetes](https://kubernetes.io/zh-cn/docs/test/)
-- 
+- [jekyll下Markdown的填坑技巧 | Weclome to eipi10](https://eipi10.cn/others/2019/12/07/jekyll-markdown-skills/)
 
 在md文件中使用竖线进行分割的时候，会被识别未表格：
 ```
@@ -261,11 +261,19 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 &#124; 这个标识在typora中可以显示，但是在Obsidian中不能正常显示
 ```
 
+说明：Jekyll 默认使用 Kramdown 作为其 Markdown 引擎，而 Kramdown 在解析 Markdown 时会将竖线（|）视为表格的分隔符。如果你想在 Markdown 中避免竖线被渲染成表格，可以使用 HTML 实体来代替竖线。
+
+是否有方式可对其进行配置？
+
+
 
 ## 13 相关参考链接
 
 - [jekyll中文网站](https://jekyllcn.com/)
+- [欢迎 - Jekyll • 简单静态博客网站生成器](https://jekyllcn.com/docs/home/)
 - [Markdown 语法的使用 - 孙思锴的博客 | Kay Blog](https://sunsikai.github.io/2020/05/20/Markdown-%E8%AF%AD%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8/)
 - [在Jekyll中使用LaTex - Librarius's Blog](https://lloyar.github.io/2018/10/08/mathjax-in-jekyll.html)
 - [黄玄的博客 | Hux Blog](https://huangxuan.me/)
 - [jekyll下Markdown的填坑技巧 | Weclome to eipi10](https://eipi10.cn/others/2019/12/07/jekyll-markdown-skills/)
+
+[黄玄的博客 | Hux Blog](https://huangxuan.me/)
