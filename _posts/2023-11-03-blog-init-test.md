@@ -248,9 +248,24 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 需要熟悉的熟悉规则具体如下： #todo/完善
 
+### 12.5 竖线被识别为表格
+
+参考链接：
+
+- [测试页面（中文版） | Kubernetes](https://kubernetes.io/zh-cn/docs/test/)
+- 
+
+在md文件中使用竖线进行分割的时候，会被识别未表格：
+```
+| 会被识别未表格
+&#124; 这个标识在typora中可以显示，但是在Obsidian中不能正常显示
+```
+
+
 ## 13 相关参考链接
 
-[jekyll中文网站](https://jekyllcn.com/)
-[Markdown 语法的使用 - 孙思锴的博客 | Kay Blog](https://sunsikai.github.io/2020/05/20/Markdown-%E8%AF%AD%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8/)
-[在Jekyll中使用LaTex - Librarius's Blog](https://lloyar.github.io/2018/10/08/mathjax-in-jekyll.html)
-[黄玄的博客 | Hux Blog](https://huangxuan.me/)
+- [jekyll中文网站](https://jekyllcn.com/)
+- [Markdown 语法的使用 - 孙思锴的博客 | Kay Blog](https://sunsikai.github.io/2020/05/20/Markdown-%E8%AF%AD%E6%B3%95%E7%9A%84%E4%BD%BF%E7%94%A8/)
+- [在Jekyll中使用LaTex - Librarius's Blog](https://lloyar.github.io/2018/10/08/mathjax-in-jekyll.html)
+- [黄玄的博客 | Hux Blog](https://huangxuan.me/)
+- [jekyll下Markdown的填坑技巧 | Weclome to eipi10](https://eipi10.cn/others/2019/12/07/jekyll-markdown-skills/)
