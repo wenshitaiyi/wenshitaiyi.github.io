@@ -236,9 +236,41 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 ### 12.1 数学公式显示
 
+在现有的博客模板中已经可以显示了，但也需要微调，改成如下形式即可：
+
+```js
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+    SVG: {
+      scale: 90
+    },
+    tex2jax: {
+      inlineMath: [ ['$','$'] ,['\\(','\\)']],
+	  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      displayMath: [ ['$$','$$'] ,['\\[','\\]']],
+      processEscapes: true,
+    }
+  });
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_SVG">
+</script>
+```
+
+主要是displayMath这一项的内容，添加了一种中括号的形式。这是因为在md文件中如果是行间公式，是通过`$$`包裹的，这种公式转换为html文件的时候会变成`\[\]`的形式。
+
 ### 12.2 换行问题
 
+紧凑换行，末尾添加两个空格。常规换行，使用两次回车。可以参考：[2024-01-14-批量调整紧凑换行的格式](2024-01-14-批量调整紧凑换行的格式.md)
+
 ### 12.3 分隔符问题
+
+使用`***`的形式即可，具体情况可以参考：[2024-01-13-MD分割线测试（实际上没有什么作用）](2024-01-13-MD分割线测试.md)
 
 ### 12.4 与Obsidian配合使用
 
@@ -263,8 +295,27 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 说明：Jekyll 默认使用 Kramdown 作为其 Markdown 引擎，而 Kramdown 在解析 Markdown 时会将竖线（|）视为表格的分隔符。如果你想在 Markdown 中避免竖线被渲染成表格，可以使用 HTML 实体来代替竖线。
 
-是否有方式可对其进行配置？
+#### 是否有方式可对其进行配置？^skip
 
+直接咨询的ChatGPT4，暂时没有方法通过配置文件对其进行调整，但是有必要吗？在本地是不是也OK？我直接在本地查看，不管这些破事应该也OK，反正个人博客网站看的人也比较少。
+
+对！不能内耗了，先保证本地的文件编辑是正常的，后期可以实现一个自动化的脚本，批量的处理博客中的文件，将其调整成为jekyll可以正常渲染的内容，对于竖线这种情况，如果可以不使用那就不使用，如果实在要用，就临时替换成编码形式。
+
+> 只要有原始的博客内容，在未来定然会有更加方便的博客编辑的方式，也不急于一时，可以先积攒一些内容，这个才是重点，疯狂的构建博客，简直就是舍本逐末。
+
+### 12.6 jekyll自动刷新问题
+
+记得开始配置环境的时候，只要是md文件有所改变，对应的网页就会刷新，但是现在md文件调整之后不会有任何的变化，如果是和配置有关的文件发生了调整，则是可以自动刷新的，这是正常的吗？
+
+如同[Jekyll auto reloading](https://stackoverflow.com/questions/15723412/jekyll-auto-reloading)描述的一般，这是正常的吗？没想到想要构建一个博客网站竟然这般麻烦，不如就在本地吧，反正也不会有人看到这些文章！！！
+
+再如[Live reload local Jekyll site in browser on file changes — Amit Merchant — A blog on PHP, JavaScript, and more](https://www.amitmerchant.com/live-reloading-local-jekyll-site-on-file-changes/#:~:text=As%20you%20may%20guess%2C%20all,jekyll%20serve%20command%20like%20so.&text=And%20it%20will%20automatically%20reload,site%20in%20your%20browser%20automatically.)文章中描述的一般，即使使用了`-l`选项依旧不能再md文件调整的时候进行自动的刷新。
+
+等等，我现在是在内耗吗？
+
+个人感觉可能是因为将_posts文件夹设置成了符号链接的原因。对于不是符号链接的哪些文件，刷新是正常的，这可真是恨啊！
+
+对于_posts文件夹，暂时将blog中的作为主题，Obsidian中的作为链接，找到链接被覆盖的原因之后再进行决定如何修改。
 
 
 ## 13 相关参考链接
