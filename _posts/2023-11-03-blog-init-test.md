@@ -295,7 +295,7 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 说明：Jekyll 默认使用 Kramdown 作为其 Markdown 引擎，而 Kramdown 在解析 Markdown 时会将竖线（|）视为表格的分隔符。如果你想在 Markdown 中避免竖线被渲染成表格，可以使用 HTML 实体来代替竖线。
 
-#### 是否有方式可对其进行配置？^skip
+#### 12.5.1 是否有方式可对其进行配置？^skip
 
 直接咨询的ChatGPT4，暂时没有方法通过配置文件对其进行调整，但是有必要吗？在本地是不是也OK？我直接在本地查看，不管这些破事应该也OK，反正个人博客网站看的人也比较少。
 
