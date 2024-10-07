@@ -86,18 +86,18 @@ post.puts "---"
 
 ## 4 中文调整
 
-| 关键字 | 页面 |
-| ------ | ---- |
-| About  | about.html |
-| Archive  | archive.html |
-| Home  | _includes\nav.html |
-| About Me  | _includes\short-about.html |
-| Featured Tag  | _includes\featured-tags.html |
-| Catalog  | _includes\post.html |
-| Powered by  | _includes\footer.html |
-| Previous/Next | _layouts\keynote.html |
-| FRIENDS | _includes\friends.html |
-| Newer Posts/Older Posts | index.html |
+| 关键字                     | 页面                           |
+| ----------------------- | ---------------------------- |
+| About                   | about.html                   |
+| Archive                 | archive.html                 |
+| Home                    | _includes\nav.html           |
+| About Me                | _includes\short-about.html   |
+| Featured Tag            | _includes\featured-tags.html |
+| Catalog                 | _includes\post.html          |
+| Powered by              | _includes\footer.html        |
+| Previous/Next           | _layouts\keynote.html        |
+| FRIENDS                 | _includes\friends.html       |
+| Newer Posts/Older Posts | index.html                   |
 
 其中archive页面直接调整中文之后，文章会无法被检测到，需要调整footer.html，添加如下代码
 
@@ -155,7 +155,8 @@ gitalk.render('container-blog')
 
 界面中的header具体有什么作用？是否可以将其中的侧边栏单独去掉？
 
-## 7 点击特效
+## 7 特效
+### 7.1 点击特效
 
 ```js
 <script type="text/javascript">
@@ -190,7 +191,7 @@ jQuery(document).ready(function($) {
 </script>
 ```
 
-## 8 雪花效果
+### 7.2 雪花效果
 
 ```js
 
@@ -205,19 +206,21 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 这些效果真是神奇，只需要添加一段脚本就可以有效果
 
-## 9 看板娘
+## 8 控件
+
+### 8.1 看板娘
 
 这个人的主页上有：[ 一杯清酒邀明月](https://www.cnblogs.com/ybqjymy/)
 
 使用这个的时候会下载关于看板娘的资源，目前还没能成功的添加上
 
-## 10 统计分析
+## 9 统计分析
 
 谷歌的统计分析：footer.html中有使用`ga_track_id`的位置，是在这里进行的设置。
 
 后续还需要添加百度的分析模块
 
-## 11 写些什么
+## 10 写些什么
 
 - 生活中经历的事情
 - 编程所得（c++、python、personal prj···）
@@ -232,9 +235,9 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 > 有一个想法，“怎么样可以让博客对外可见，但是github仓库对外不可见”，经过一波冷静分析之后，觉得这无异于自讨苦吃，现在的记录日志含金量不高，谁看或者是谁拥有都是一样的。
 
-## 12 问题记录
+## 11 问题记录
 
-### 12.1 数学公式显示
+### 11.1 数学公式显示
 
 在现有的博客模板中已经可以显示了，但也需要微调，改成如下形式即可：
 
@@ -264,15 +267,15 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 主要是displayMath这一项的内容，添加了一种中括号的形式。这是因为在md文件中如果是行间公式，是通过`$$`包裹的，这种公式转换为html文件的时候会变成`\[\]`的形式。
 
-### 12.2 换行问题
+### 11.2 换行问题
 
 紧凑换行，末尾添加两个空格。常规换行，使用两次回车。可以参考：[2024-01-14-批量调整紧凑换行的格式](2024-01-14-批量调整紧凑换行的格式.md)
 
-### 12.3 分隔符问题
+### 11.3 分隔符问题
 
 使用`***`的形式即可，具体情况可以参考：[2024-01-13-MD分割线测试（实际上没有什么作用）](2024-01-13-MD分割线测试.md)
 
-### 12.4 与Obsidian配合使用
+### 11.4 与Obsidian配合使用
 
 是否可以有一种方式，技能使用Obsidian的丰富插件功能，还是使用Typora良好的实时渲染显示效果？使用typora进行md文章的编写，在githug.io的网页中出现错误的概率是比较小的，但是使用Obsidian编写md文件的时候会因为太多随意导致文章渲染之后效果比较差。
 
@@ -280,7 +283,7 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 需要熟悉的熟悉规则具体如下： #todo/完善
 
-### 12.5 竖线被识别为表格
+### 11.5 竖线被识别为表格
 
 参考链接：
 
@@ -295,7 +298,7 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 说明：Jekyll 默认使用 Kramdown 作为其 Markdown 引擎，而 Kramdown 在解析 Markdown 时会将竖线（|）视为表格的分隔符。如果你想在 Markdown 中避免竖线被渲染成表格，可以使用 HTML 实体来代替竖线。
 
-#### 12.5.1 是否有方式可对其进行配置？^skip
+#### 11.5.1 是否有方式可对其进行配置？^skip
 
 直接咨询的ChatGPT4，暂时没有方法通过配置文件对其进行调整，但是有必要吗？在本地是不是也OK？我直接在本地查看，不管这些破事应该也OK，反正个人博客网站看的人也比较少。
 
@@ -303,7 +306,7 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 
 > 只要有原始的博客内容，在未来定然会有更加方便的博客编辑的方式，也不急于一时，可以先积攒一些内容，这个才是重点，疯狂的构建博客，简直就是舍本逐末。
 
-### 12.6 jekyll自动刷新问题
+### 11.6 jekyll自动刷新问题
 
 记得开始配置环境的时候，只要是md文件有所改变，对应的网页就会刷新，但是现在md文件调整之后不会有任何的变化，如果是和配置有关的文件发生了调整，则是可以自动刷新的，这是正常的吗？
 
@@ -316,6 +319,50 @@ $.fn.snow({ minSize: 5, maxSize: 50, newOn: 1000, flakeColor: '#aaa' });
 个人感觉可能是因为将_posts文件夹设置成了符号链接的原因。对于不是符号链接的哪些文件，刷新是正常的，这可真是恨啊！
 
 对于_posts文件夹，暂时将blog中的作为主题，Obsidian中的作为链接，找到链接被覆盖的原因之后再进行决定如何修改。
+
+## 12 其他测试
+
+### 12.1 本地bat文件
+
+在win上写一个bat文件，快速启动jekyll环境：
+
+```bat
+@echo off
+
+rem 启动 Ruby 环境
+rem C:\Windows\System32\cmd.exe /E:ON /K D:\Ruby32-x64\bin\ridk enable
+
+rem 启用 Ruby 环境
+call D:\Ruby32-x64\bin\ridk enable
+
+rem 切换到 E: 盘
+E:
+
+rem 切换到你的 Jekyll 项目目录
+cd "E:\Blog\wenshitaiyi.blog"
+
+rem 启动 Jekyll 服务
+jekyll serve
+```
+
+`C:\Windows\System32\cmd.exe /E:ON /K D:\Ruby32-x64\bin\ridk enable`这个是原来ruby安装之后自带的一个，在bat文件中会阻塞后续的代码执行。
+
+**ChatGPT：**
+
+这是因为 `cmd.exe` 的 `/K` 参数会启动一个新的命令提示符会话，并在执行完 `ridk enable` 命令后保持该命令提示符窗口打开。在这种情况下，脚本会暂停，后续的命令将不会被执行。
+
+原理解释：
+
+- **`cmd.exe /K`**：表示运行指定的命令后不关闭命令提示符窗口，这会中断批处理文件的执行，因为它启动了一个新的命令行环境并停在那里等待用户输入。
+
+为了继续执行批处理文件中的其他命令，你可以使用 `&&` 操作符将命令链接起来，或者使用 `/C` 参数而不是 `/K`。不过，问题是，你需要一个新的命令提示符会话来执行 Ruby 环境命令（`ridk enable`），并在同一个环境中执行后续命令。
+
+解决方案：
+
+为了在同一个环境中执行所有命令，你可以将 `ridk enable` 的命令行部分移到批处理文件本身中，而不通过一个新的命令提示符来启动。这样整个批处理文件会在同一个环境中运行。
+
+### 12.2 增加静态页面
+
 
 
 ## 13 相关参考链接
